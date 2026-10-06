@@ -1,0 +1,13 @@
+interface:
+  display_name: 以史为鉴
+  short_description: 结合中国历史案例与现代方法，厘清现实困境、检验类比并形成可复盘的行动建议
+  default_prompt: 请用 $history-problem-solver 分析我当前的困境，核对历史类比是否成立，并给出下一步行动和重新判断的条件。
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,11 @@
+.DS_Store
+**/.DS_Store
+__pycache__/
+.env
+.env.*
+history-problem-solver/source/
+history-problem-solver/source-md/
+history-problem-solver/Morden- source/
+history-problem-solver/tests/
+docs/
+PLANS.md
