@@ -1,10 +1,56 @@
 # 以史为鉴
 
-`history-problem-solver` 结合中国历史中的决策结构与现代问题解决方法，帮助厘清目标、比较行动路径和制定可复盘的下一步。历史提供参照，现实证据决定行动。
+**用中国历史案例，帮你分析去留、合作与时机选择，形成可验证的下一步。**
 
-## 使用
+`history-problem-solver` 是一个结合中国历史决策结构与现代问题解决方法的 AI agent skill。它先厘清你的目标，再检查古今类比是否成立，比较行动路径，并说明何时需要重新判断。历史提供参照，现实证据决定行动。
 
-入口为 [history-problem-solver/SKILL.md](history-problem-solver/SKILL.md)。可要求助手按该文件流程、按需读取资源；在支持本地技能的环境中使用 `history-problem-solver/` 目录。普通咨询不读取维护与测试资料；不相关或简单问题不强行套历史案例。
+History-informed decision support with Chinese historical cases and modern problem-solving methods.
+
+[GitHub 仓库](https://github.com/Jetting-L/yi-shi-wei-jian) · [skills.sh 技能目录](https://skills.sh/jetting-l/yi-shi-wei-jian/history-problem-solver)
+
+## 快速试用（Codex）
+
+需要已安装 Node.js（提供 `npx`）和可使用本地技能的 Codex。在你希望使用技能的项目目录中运行：
+
+```bash
+npx --yes skills add Jetting-L/yi-shi-wei-jian --skill history-problem-solver --agent codex --copy --yes
+```
+
+命令将技能安装到当前项目的 `.agents/skills/history-problem-solver/`，属于项目级安装。打开该项目后，在 Codex 中输入 `$history-problem-solver` 调用；如果未出现，重新启动 Codex。
+
+复制以下提问，替换方括号内容：
+
+```text
+请用 $history-problem-solver 帮我分析这个困境：
+我正在考虑：[具体决定]。
+我希望下一阶段：[想获得或保留的东西]。
+已知事实与限制：[时间、资源、相关人的实际行为]。
+目前的选项：[已有选项；没有也可以说明]。
+请先澄清会影响判断的关键问题，再按需要核对历史类比，
+比较路径，给出一个可执行的下一步和重新判断的条件。
+```
+
+目标还不清楚时，也可以直接说“我不知道下一阶段想要什么”，先从目标澄清开始。
+
+## 适合什么问题
+
+- **去留选择**：继续投入、调整参与方式，还是退出？各条路径如何服务你的阶段目标？
+- **合作与信任**：承诺与行动是否一致？激励、责任、权限和退出空间怎样影响合作？
+- **时机与风险**：现在行动、先做小规模试验，还是等待关键证据？什么信号会改变判断？
+
+历史案例用于提出可检验的结构问题，不强行把古代人物或结局套到现代处境。没有贴切案例时，继续现实分析。
+
+想先了解对话方式，可阅读已有的[完整对话示范](history-problem-solver/references/examples/goal_to_action.md)。其中用户、数字和结果均为虚构，不是试用反馈或效果证明。
+
+## 其他使用方式与安装说明
+
+技能入口为 [SKILL.md](history-problem-solver/SKILL.md)。也可从公开仓库下载完整 `history-problem-solver/` 目录，在支持本地技能的环境中使用；只复制 `SKILL.md` 会缺少按需加载的案例与方法卡。
+
+如果当前助手能访问本仓库文件，也可直接要求它按 `SKILL.md` 流程、按需读取资源。这种方式不等于已安装或已验证该助手的技能兼容性。
+
+安装命令来自第三方 [skills CLI](https://github.com/vercel-labs/skills)。Codex 的加载路径与调用方式见 [OpenAI 官方技能文档](https://learn.chatgpt.com/docs/build-skills)。skills.sh 根据安装遥测提供发现与排名，见 [skills.sh FAQ](https://skills.sh/docs/faq)；目录收录不代表 OpenAI 官方推荐或实用效果验证。
+
+普通咨询不读取维护与测试资料；纯事实查询、翻译、简单偏好选择不走完整决策流程。医疗、法律、财务或紧急专业处置应优先依据现实证据，历史分析不能替代专业判断。
 
 ## 当前内容
 
